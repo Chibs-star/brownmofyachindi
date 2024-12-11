@@ -1,0 +1,174 @@
+/* Base Reset and Typography */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* Updated to a friendly, modern font */
+}
+
+:root {
+    /* Color Variables */
+    --primary-bg: #f0f4f8; /* Soft background */
+    --primary-color: #1e88e5; /* Vibrant blue */
+    --secondary-color: #43a047; /* Refreshing green for accents */
+    --text-color: #333; /* Dark text for readability */
+    --light-text: #666; /* Lighter text for contrast */
+    --border-color: #ddd; /* Subtle borders */
+
+    /* Font Sizes */
+    --font-small: 0.9rem;
+    --font-medium: 1.2rem;
+    --font-large: 1.6rem;
+    --font-xl: 2.5rem;
+}
+
+/* General Body Styles */
+body {
+    background: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: var(--font-xl);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Form Section */
+.form-container {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: var(--font-medium);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(30, 136, 229, 0.3);
+    outline: none;
+}
+
+.form-container button {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--font-medium);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Weather Details Section */
+.user-info-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.user-info-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid var(--secondary-color);
+}
+
+.user-info-container p {
+    font-size: var(--font-medium);
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.user-info-container p[data-temp] {
+    font-size: var(--font-large);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Parameter Section */
+.parameter-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.parameter {
+    flex: 1;
+    background: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.parameter img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.parameter p {
+    font-size: var(--font-small);
+    color: var(--light-text);
+}
+
+.parameter p:first-of-type {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: var(--font-medium);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    font-size: var(--font-small);
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
